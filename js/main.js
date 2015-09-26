@@ -1,27 +1,52 @@
-webpackJsonp([0],[
-/* 0 */
+webpackJsonp([4],{
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(__dirname) {var path = __webpack_require__(1);
-	var CommonsChunkPlugin = __webpack_require__(3);
+	__webpack_require__(6);
+	module.exports = __webpack_require__(163);
+
+
+/***/ },
+
+/***/ 163:
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(__dirname) {var path = __webpack_require__(164);
+	var CommonsChunkPlugin = __webpack_require__(165);
+	// var webpack = require("webapck/lib/webpack");
+
 	module.exports = {
-	    entry: {
-	        pageA: "./pageA",
-	        pageB: "./pageB"
-	    },
-	    output: {
-	        path: path.join(__dirname, "js"),
-	        filename: "[name].bundle.js",
-	        chunkFilename: "[id].chunk.js"
-	    },
-	    plugins: [
-	        new CommonsChunkPlugin("commons.js")
-	    ]
+		entry: {
+			pageA: "./pageA",
+			pageB: "./pageB",
+			pageC: "./pageC",
+			adminPageA: "./adminPageA",
+			adminPageB: "./adminPageB",
+			adminPageC: "./adminPageC",
+			main: "./main",
+			testA: "./testA",
+			common: "./common"
+		},
+		output: {
+			path: path.join(__dirname, "js"),
+			filename: "[name].js",
+			// chunkFilename: "[id].js"
+		},
+		plugins: [
+		 	// new webpack.NewWatchingPlugin(),
+			new CommonsChunkPlugin("admin-commons.js", ["adminPageA", "adminPageB"]),
+			// new CommonsChunkPlugin("commons.js", ["pageA", "pageB", "admin-commons.js"], 2),
+			new CommonsChunkPlugin("ab.js", ["main",'testA']),
+			new CommonsChunkPlugin("c-commons.js", ["pageC", "adminPageC"]),
+			// new webpack.optimize.CommonsChunkPlugin('main', 'main.js'),
+		]
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ },
-/* 1 */
+
+/***/ 164:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -249,11 +274,11 @@ webpackJsonp([0],[
 	    }
 	;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
-/* 2 */,
-/* 3 */
+
+/***/ 165:
 /***/ function(module, exports) {
 
 	/*
@@ -429,4 +454,5 @@ webpackJsonp([0],[
 
 
 /***/ }
-]);
+
+});

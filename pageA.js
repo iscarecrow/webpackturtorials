@@ -1,8 +1,6 @@
-var Common = require("./common");
+var ABC = require("./modules/a-b-c");
 
-
-console.log('page1');
-
-// require(["./shared"], function(shared) {
-//   shared("This is page A");
-// });
+// require("./modules/a-b");
+// require("./modules/a-c");
+console.log('pageA');
+ABC.say();
