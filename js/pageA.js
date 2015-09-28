@@ -10,11 +10,14 @@ webpackJsonp([5],[
 	var $ = __webpack_require__(3);
 
 	var _ = __webpack_require__(4);
-	console.log($);
-	console.log('pageA');
-	console.log(_);
-	// ABC.say();
 
+	var a = 'aaa';
+
+	var b = 'ss';
+	window.b = b;
+
+	console.log(a);
+	console.log('pageA');
 
 /***/ }
 ]);

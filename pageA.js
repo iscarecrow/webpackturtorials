@@ -6,7 +6,11 @@
 var $ = require('jquery');
 
 var _ = require('underscore');
-console.log($);
+
+var a = 'aaa';
+
+var b = 'ss';
+window.b = b;
+
+console.log(a);
 console.log('pageA');
-console.log(_);
-// ABC.say();
