@@ -1,6 +1,12 @@
-var ABC = require("./modules/a-b-c");
+// var ABC = require("./modules/a-b-c");
 
 // require("./modules/a-b");
 // require("./modules/a-c");
+
+var $ = require('jquery');
+
+var _ = require('underscore');
+console.log($);
 console.log('pageA');
-ABC.say();
+console.log(_);
+// ABC.say();

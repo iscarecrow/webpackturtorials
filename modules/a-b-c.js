@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 var ABC = {
   say: function() {
     console.log('i am a abc');
