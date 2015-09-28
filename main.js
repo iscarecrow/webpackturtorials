@@ -1,8 +1,5 @@
 var $ = require('jquery');
-
-var react = require('React');
-
-
+console.log('Main');
 // console.log($);
 // console.log(react);
 // console.log('Main');
